@@ -51,6 +51,10 @@
   }
 </style>
 
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="./script.js" defer></script>
+
 <h1>Sign Up for Premium Corgi Content</h1>
 
 <div class="user-info">
@@ -73,6 +77,37 @@
   </div>
 </div>
 
+<div class="sr-container">
+          <section class="container basic-photo">
+            <div>
+              <h1>Men's subscription</h1>
+              <h4>Min of 10ml per month</h4>
+              <div class="pasha-image">
+                <img
+                  src="images/perfumemal.png"
+                  width="160"
+                  height="160"
+                />
+              </div>
+            </div>
+            <button id="basic-plan-btn">£25.00 per month</button>
+          </section>
+          <section class="container basic-photo">
+            <div>
+              <h1>Women's subscription</h1>
+              <h4>Min of 10ml per month</h4>
+              <div class="pasha-image">
+                <img
+                  src="images/perfumefem.png"
+                  width="160"
+                  height="160"
+                />
+            </div>
+			</div>
+            <button id="pro-plan-btn">£25.00 per month</button>
+          </section>
+        </div>
+
 <template id="content">
   <figure class="content-display">
     <img />
@@ -81,6 +116,7 @@
     </figcaption>
   </figure>
 </template>
+
 
 <script
   type="text/javascript"
