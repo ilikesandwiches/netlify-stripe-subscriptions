@@ -1,0 +1,248 @@
+
+
+#faq_page {
+    background-image: url("../images/1.jpg");
+}
+
+  /* accordion */
+  $midnight:#ffffff;
+  $clouds: #ecf0f1;
+  
+  
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  // Layout 
+   .row2 {
+    //display:flex;
+    .col2 {
+      flex:1;
+      &:last-child {
+       // margin-left: 1em;
+      }
+    }
+  } 
+  /* Accordion styles */
+  .tabs {
+      font-size:14px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);
+  }
+  .tab {
+    //width: 100%;
+    color: #323232;
+    font-family: "Raleway",sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    &-label {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      background: $midnight;
+      font-weight: bold;
+      cursor: pointer;
+      /* Icon */
+      &:hover {
+        background: darken($midnight, 10%);
+        color: #B59D5F;
+      }
+      &::after {
+        content: "\276F";
+        width: 1em;
+        height: 1em;
+        text-align: center;
+        transition: all .35s;
+      }
+    }
+    &-content {
+      max-height: 0;
+      padding: 0 1em;
+      color: #757575;
+      text-transform: none;
+      background: white;
+      transition: all .35s;
+    }
+    &-close {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1em;
+      font-size: 0.75em;
+      background: $midnight;
+      cursor: pointer;
+      &:hover {
+        background: darken($midnight, 10%);
+        color: #B59D5F
+      }
+    }
+  }
+  
+  // :checked
+  input:checked {
+    + .tab-label {
+      background: darken($midnight, 10%);
+      color: #B59D5F;
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+    ~ .tab-content {
+      max-height: 100vh;
+      padding: 1em;
+    }
+  }
+  
+/* end accordion */
+
+/* main menu 
+
+header {
+    padding: 10px 100px;
+    box-sizing: border-box;
+  }
+  
+  section {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  section.sec1 {
+    background: url("https://images.pexels.com/photos/697243/pexels-photo-697243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+  }
+  
+  section.sec2 {
+    padding: 100px;
+    box-sizing: border-box;
+    height: auto;
+  }
+  
+  section.sec2 h2 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0 0 20px;
+    color: #fff;
+  }
+  
+  section.sec2 p {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+  
+  section.sec3 {
+    background: url("https://images.pexels.com/photos/1267696/pexels-photo-1267696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: cover;
+  }
+  
+  nav {
+    width: 100%;
+    height: 50px;
+    background: rgba(0,0,0, .8);
+    border-top: 1px solid rgba(255,255,255, .2);
+    border-bottom: 1px solid rgba(255,255,255, .2);
+    position: sticky;
+    top: 0;
+  }
+  
+  nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0 100px;
+    justify-content: flex-end;
+  }
+  
+  nav ul li {
+    list-style: none;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: #fff;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px; /**  Rarely used! **
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    background: #f00;
+    
+  } 
+  
+/* end main menu */  
+
+.top_panel_wrap {
+    position: sticky;
+    top: 0;
+}
+
+.slider {
+	align-items: center;
+	background: #E3E3E3;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+}
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(181, 157, 95,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+
+// Styling
+.slider {
+	background: #B59D5F;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 140px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100vw;
+	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 140px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+	}
+	
+	.slide {
+		height: 140px;
+		width: 250px;
+	}
+}
