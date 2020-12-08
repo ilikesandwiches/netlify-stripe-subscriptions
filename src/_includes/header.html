@@ -1,145 +1,110 @@
-<style>
-  .lwj-demo-header {
-    background: var(--black);
-    font-family: var(--font-family);
-    position: relative;
-  }
-
-  .lwj-demo-header .logo-wrapper {
-    align-items: center;
-    display: flex;
-    height: 56px;
-    justify-content: flex-start;
-    padding: 0 1rem;
-    position: relative;
-    width: 100vw;
-  }
-
-  .lwj-demo-header .logo-wrapper::after {
-    background-image: linear-gradient(
-      255deg,
-      var(--black) 0%,
-      var(--black-transparent) 30%
-    );
-    bottom: 0;
-    content: '';
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 300px;
-    z-index: 10;
-  }
-
-  .lwj-demo-header .logo {
-    display: block;
-    height: auto;
-    position: relative;
-    transform: rotate(-3deg);
-    transition: transform 250ms ease-out;
-    width: 300px;
-    z-index: 15;
-  }
-
-  .lwj-demo-header .logo::after {
-    background: var(--white);
-    border: 1px solid var(--dark-gray);
-    border-radius: 0.25rem;
-    color: var(--dark-gray);
-    content: 'Start smelling like a god!!!';
-    display: block;
-    left: -0.5rem;
-    opacity: 0;
-    padding: 0.5rem;
-    position: absolute;
-    text-align: center;
-    top: 98%;
-    transition: opacity 300ms linear;
-    width: 230px;
-  }
-
-  .lwj-demo-header .logo:active,
-  .lwj-demo-header .logo:focus,
-  .lwj-demo-header .logo:hover {
-    transform: rotate(0deg);
-  }
-
-  .lwj-demo-header .logo:active::after,
-  .lwj-demo-header .logo:focus::after,
-  .lwj-demo-header .logo:hover::after {
-    opacity: 1;
-  }
-
-  .lwj-demo-header .logo img {
-    display: block;
-    width: 100%;
-  }
-
-  .lwj-demo-header .home-link {
-    color: var(--white);
-    font-size: 1rem;
-    font-weight: 900;
-    margin-left: 0.75rem;
-    position: relative;
-    text-decoration: none;
-    z-index: 15;
-  }
-
-  .lwj-demo-header #canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .lwj-demo-header .top-bar {
-    animation: gradient-roll 20s linear infinite alternate;
-    background-image: var(--lwj-gradient);
-    background-size: 200%;
-    border-bottom: 0.5px solid var(--light-gray);
-    height: 9px;
-    position: relative;
-    top: 100%;
-    width: 100vw;
-    z-index: 5;
-  }
-
-  .lwj-demo-header .top-bar::before,
-  .lwj-demo-header .top-bar::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100vw;
-  }
-
-  .lwj-demo-header .top-bar::before {
-    bottom: 1px;
-    height: 0.5px;
-    background-color: var(--light-gray);
-  }
-
-  .lwj-demo-header .top-bar::after {
-    bottom: 0;
-    height: 1px;
-    background-color: var(--black);
-  }
-</style>
-
-<header class="lwj-demo-header">
-  <div class="logo-wrapper">
-    <canvas id="canvas" width="" height="300"></canvas>
-    <a href="https://www.perfumesubscriptions.com" class="logo"
-      ><img src="/images/psubs.png" alt="perfumesubscriptions.com"
-    /></a>
-    <a href="/" rel="home" class="home-link">
-      {{ title }}
-    </a>
-  </div>
-
-  <div class="top-bar"></div>
-</header>
-
-<script type="module">
-  import { startAnimation } from '/js/dots.js';
-
-  startAnimation();
-</script>
+        <header class="top_panel_wrap top_panel_style_6 scheme_dark">
+            <div class="top_panel_wrap_inner top_panel_inner_style_6 top_panel_position_over">
+                <div class="top_panel_middle">
+                    <div class="content_wrap">
+                        <div class="contact_logo">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="images/logo_dark-1.png" class="logo_main" alt="" width="238" height="56">
+                                    <img src="images/logo_dark-1.png" class="logo_fixed" alt="" width="238" height="56">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menu_main_wrap">
+                            <nav class="menu_main_nav_area">
+                                <ul class="menu_main_nav">
+                                    <li class="menu-item"><a href="faq.html">FAQ</a>
+                                        
+                                    </li>
+									
+									<li>
+									<div class="sc_section_content_wrap user-info">
+                                                        <a class="sc_button sc_button_square sc_button_style_border sc_button_size_base" style="color:#fff" id="left">Log In</a>
+                                                       
+                                                    </div>
+									</li>
+									<!--
+                                    <li class="menu-item menu-item-has-children"><a>Features</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-has-children"><a>Gallery</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item"><a href="gallery-grid.html">Grid</a></li>
+                                                    <li class="menu-item"><a href="gallery-masonry.html">Masonry</a></li>
+                                                    <li class="menu-item"><a href="gallery-cobbles.html">Cobbles</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item"><a href="gallery-polaroid.html">Polaroid gallery</a></li>
+                                            <li class="menu-item menu-item-has-children"><a>About</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item"><a href="about-us.html">About Us</a></li>
+                                                    <li class="menu-item"><a href="about-us-2.html">About Us 2</a></li>
+                                                    <li class="menu-item"><a href="staff.html">Our Staff</a></li>
+                                                    <li class="menu-item"><a href="contacts.html">Contacts Us</a></li>
+                                                    <li class="menu-item"><a href="price-tables.html">Price Tables</a></li>
+                                                    <li class="menu-item"><a href="pricing.html">Pricing</a></li>
+                                                    <li class="menu-item"><a href="events.html">Events</a></li>
+                                                    <li class="menu-item"><a href="certificates.html">Gift Certificates</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children"><a>Services</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item"><a href="services.html">Services 1</a></li>
+                                                    <li class="menu-item"><a href="services-2.html">Services 2</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children"><a>Pages</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item"><a href="typography.html">Typography</a></li>
+                                                    <li class="menu-item"><a href="shortcodes.html">Shortcodes</a></li>
+                                                    <li class="menu-item"><a href="404.html">404 Page</a></li>
+                                                    <li class="menu-item"><a href="customization.html">Customization</a></li>
+                                                    <li class="menu-item"><a href="faq.html">Faq Page</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item"><a href="booking.html">Booking</a></li>
+                                    <li class="menu-item menu-item-has-children"><a>Blog</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="classic.html">Classic</a></li>
+                                            <li class="menu-item menu-item-has-children"><a>Masonry</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item"><a href="masonry-2-columns.html">2 columns</a></li>
+                                                    <li class="menu-item"><a href="masonry-3-columns.html">3 columns</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item menu-item-has-children"><a>Portfolio</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item"><a href="portfolio-2-columns.html">2 columns</a></li>
+                                                    <li class="menu-item"><a href="portfolio-3-columns.html">3 columns</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item"><a href="post-formats.html">Post Formats</a></li>
+                                        </ul>
+                                    </li>-->
+                                    <!--<li class="menu-item"><a href="shop.html">Shop</a></li>-->
+                                </ul>
+                            </nav>
+                            <!--<div class="menu_main_cart top_panel_icon">
+                                <a href="#" class="top_panel_cart_button" data-items="0" data-summa="&pound;0.00">
+                                    <span class="contact_icon icon-icon_bag_alt"></span>
+                                </a>
+                                <ul class="widget_area sidebar_cart sidebar">
+                                    <li>
+                                        <div class="widget woocommerce widget_shopping_cart">
+                                            <div class="hide_cart_widget_if_empty">
+                                                <div class="widget_shopping_cart_content">
+                                                    <ul class="cart_list product_list_widget ">
+                                                        <li class="empty">No products in the cart.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
