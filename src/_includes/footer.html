@@ -1,86 +1,208 @@
-<style>
-  .lwj-demo-footer {
-    background: var(--black);
-    color: var(--light-gray);
-    font-family: var(--font-family);
-    padding: 1rem 5vw;
-    position: relative;
-    text-align: center;
-  }
+<footer class="footer_wrap widget_area scheme_original">
+            <div class="footer_wrap_inner widget_area_inner">
+                <div class="content_wrap">
+                    <div class="columns_wrap">
+                        <aside class="column-1_4 widget widget_socials">
+                            <div class="widget_inner">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="images/logo_dark-1.png" class="logo_main" alt="" width="195" height="51">
+                                    </a>
+                                </div>
+                                <div class="logo_descr">Artisan perfumes, straight to your door every month, from the finest niche perfumers.</div>
+                            </div>
+                        </aside>
+						<!--
+                        <aside class="column-1_4 widget widget_text">
+                            <h5 class="widget_title">Contacts</h5>
+                            <div class="textwidget">
+                                <ul class="sc_list_style_iconed ">
+                                    <li>
+                                        <span class="sc_list_icon icon-icon_pin"></span>
+                                        1234 Some St San Francisco,<br/>
+                                        CA 94102, US 1.800.123.4567
+                                    </li>
+                                    <li>
+                                        <span class="sc_list_icon icon-icon_phone"></span><a href="tel:+1234567890">(123) 456 78 90</a>
+                                    </li>
+                                    <li>
+                                        <span class="sc_list_icon icon-icon_mail"></span>
+                                        <a href="mailto:support@yoursite.com">support@yoursite.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside> -->
+						
+						<aside class="column-1_4 widget widget_recent_posts">
+                            <h5 class="widget_title">The company</h5>
+                            <article class="post_item no_thumb first">
+                                <div class="post_content">
+                                    <h6 class="post_title">
+                                        <a href="about.html">About Us</a>
+                                    </h6>
+                                    <!-- <div class="post_info">
+                                        <span class="post_info_item post_info_posted">
+                                            <a href="single-post.html" class="post_info_date">March 31, 2016</a>
+                                        </span>
+                                        <span class="post_info_item">by
+                                            <a href="single-post.html" class="post_info_author">Kate Green</a>
+                                        </span>
+                                        <span class="post_info_item post_info_counters">
+                                            <a href="single-post.html" class="post_counters_item">
+                                                <span class="post_counters_number"></span>
+                                            </a>
+                                        </span>
+                                    </div> -->
+                                </div>
+                            </article>
 
-  .lwj-demo-footer a {
-    color: inherit;
-    display: block;
-    font-size: 0.75rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    text-decoration: none;
-  }
+                            <article class="post_item no_thumb">
+                                <div class="post_content">
+                                    <h6 class="post_title">
+                                        <a href="how_it_works.html">How it works</a>
+                                    </h6>
+                                    <!-- <div class="post_info">
+                                        <span class="post_info_item post_info_posted">
+                                            <a href="single-post.html" class="post_info_date">March 31, 2016</a>
+                                        </span>
+                                        <span class="post_info_item ">by
+                                            <a href="single-post.html" class="post_info_author">Kate Green</a>
+                                        </span>
+                                        <span class="post_info_item post_info_counters">
+                                            <a href="single-post.html" class="post_counters_item">
+                                                <span class="post_counters_number"></span>
+                                            </a>
+                                        </span>
+                                    </div> -->
+                                </div>
+                            </article>
+							
+                        </aside>
+						
+                        <aside class="column-1_4 widget widget_recent_posts">
+                            <h5 class="widget_title">Have a question?</h5>
+                            <article class="post_item no_thumb first">
+                                <div class="post_content">
+                                    <h6 class="post_title">
+                                        <a href="faq.html">FAQ</a>
+                                    </h6> <!--
+                                    <div class="post_info">
+                                        <span class="post_info_item post_info_posted">
+                                            <a href="single-post.html" class="post_info_date">March 31, 2016</a>
+                                        </span>
+                                        <span class="post_info_item">by
+                                            <a href="single-post.html" class="post_info_author">Kate Green</a>
+                                        </span>
+                                        <span class="post_info_item post_info_counters">
+                                            <a href="single-post.html" class="post_counters_item">
+                                                <span class="post_counters_number"></span>
+                                            </a>
+                                        </span>
+                                    </div> -->
+                                </div>
+                            </article>
 
-  .lwj-demo-footer a:active,
-  .lwj-demo-footer a:focus,
-  .lwj-demo-footer a:hover {
-    color: var(--pink-text);
-  }
-
-  .lwj-demo-footer .bottom-bar {
-    animation: gradient-roll 20s linear infinite alternate;
-    background-image: var(--lwj-gradient);
-    background-size: 200%;
-    border-bottom: 0.5px solid var(--light-gray);
-    bottom: 100%;
-    height: 6px;
-    left: 0;
-    position: absolute;
-    width: 100vw;
-    z-index: 5;
-  }
-
-  .lwj-demo-footer .bottom-bar::before,
-  .lwj-demo-footer .bottom-bar::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100vw;
-  }
-
-  .lwj-demo-footer .bottom-bar::before {
-    top: 1px;
-    height: 0.5px;
-    background-color: var(--light-gray);
-  }
-
-  .lwj-demo-footer .bottom-bar::after {
-    top: 0;
-    height: 1px;
-    background-color: var(--black);
-  }
-
-  @media (min-width: 770px) {
-    .lwj-demo-footer {
-      padding-bottom: 0;
-      padding-top: 0;
-    }
-
-    .lwj-demo-footer a {
-      display: inline-block;
-    }
-  }
-</style>
-
-<footer class="lwj-demo-footer">
-  <a href="mailto:sales@perfumesubscriptions.com"
-    >Email us <em>sales@perfumesubscriptions.com</em></a
-  ><!--
-  {% if meta.episode %}<a href="{{ meta.episode }}">Watch It Get Built</a>{%
-  endif %}{% if meta.tutorial %}<a href="{{ meta.tutorial }}">Tutorial</a>{%
-  endif %}{% if meta.repo %}<a href="https://github.com/{{ meta.repo }}"
-    >Source Code</a
-  >
-  <a
-    href="http://app.netlify.com/start/deploy?repository=https://github.com/{{ meta.repo }}?utm_source=learnwithjason&utm_medium=lwj-demo-footer-jl&utm_campaign=devex"
-    >Deploy Your Own Copy</a
-  >{% endif %}
--->
-  <div class="bottom-bar"></div>
-</footer>
+                            <article class="post_item no_thumb">
+                                <div class="post_content">
+                                    <h6 class="post_title">
+                                        <a href="terms.html">T&Cs</a>
+                                    </h6>
+									<!--
+                                    <div class="post_info">
+                                        <span class="post_info_item post_info_posted">
+                                            <a href="single-post.html" class="post_info_date">March 31, 2016</a>
+                                        </span>
+                                        <span class="post_info_item ">by
+                                            <a href="single-post.html" class="post_info_author">Kate Green</a>
+                                        </span>
+                                        <span class="post_info_item post_info_counters">
+                                            <a href="single-post.html" class="post_counters_item">
+                                                <span class="post_counters_number"></span>
+                                            </a>
+                                        </span>
+                                    </div>-->
+                                </div>
+                            </article>
+							<article class="post_item no_thumb">
+                                <div class="post_content">
+                                    <h6 class="post_title">
+                                        <a href="contact.html">Contact Us</a>
+                                    </h6> <!--
+                                    <div class="post_info">
+                                        <span class="post_info_item post_info_posted">
+                                            <a href="single-post.html" class="post_info_date">March 31, 2016</a>
+                                        </span>
+                                        <span class="post_info_item ">by
+                                            <a href="single-post.html" class="post_info_author">Kate Green</a>
+                                        </span>
+                                        <span class="post_info_item post_info_counters">
+                                            <a href="single-post.html" class="post_counters_item">
+                                                <span class="post_counters_number"></span>
+                                            </a>
+                                        </span>
+                                    </div> -->
+                                </div>
+                            </article>
+                        </aside>
+                        <aside class="column-1_4 widget">
+                            <ul class="instagram-pics instagram-size-large">
+                                <li>
+                                    <a href="//instagram.com/p/BDqPIQOiAb2/" target="_self">
+                                        <img src="images/instagram_1.jpg" alt="" title="Instagram Image" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//instagram.com/p/BDqPG4fCAbs/" target="_self">
+                                        <img src="images/instagram_2.jpg" alt="" title="Instagram Image" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//instagram.com/p/BDqPEx2CAbm/" target="_self">
+                                        <img src="images/instagram_3.jpg" alt="" title="Instagram Image" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//instagram.com/p/BDqPCkuCAbg/" target="_self">
+                                        <img src="images/instagram_4.jpg" alt="" title="Instagram Image" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//instagram.com/p/BDqO_x4CAbY/" target="_self">
+                                        <img src="images/instagram_5.jpg" alt="" title="Instagram Image" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//instagram.com/p/BDqO9VGCAbU/" target="_self">
+                                        <img src="images/instagram_6.jpg" alt="" title="Instagram Image" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+			  <div class="copyright_wrap copyright_style_socials scheme_original">
+            <div class="copyright_wrap_inner">
+                <div class="content_wrap">
+                    <div class="sc_socials sc_socials_type_text sc_socials_shape_square sc_socials_size_tiny">
+                        <div class="sc_socials_item">
+                            <a href="#" target="_blank" class="social_icons social_twitter">twitter</a>
+                        </div>
+                        <div class="sc_socials_item">
+                            <a href="#" target="_blank" class="social_icons social_facebook">facebook</a>
+                        </div>
+                        <div class="sc_socials_item">
+                            <a href="#" target="_blank" class="social_icons social_instagramm">instagram</a>
+                        </div>
+                    </div>
+                    <span class="beforeSocials">Connect With Us:</span>
+                    <div class="copyright_text">
+                        <p>Perfume Guild Ltd © 2020 All Rights Reserved
+                            <a href="#" target="_blank">Terms of Use</a> and
+                            <a href="#" target="_blank">Privacy Policy</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </footer>
